@@ -2,6 +2,24 @@
     background: linear-gradient(120deg, #385898 44.9%, #ffff 45%) no-repeat fixed;
 }
 
+#app {
+    background: linear-gradient(120deg, #ffff 44.9%, #385898 45%) no-repeat fixed;
+}
+
+header {
+    border-bottom: 1px solid #bebcbc;
+    padding: 5px;
+    background: white;
+}
+
+.color-primary {
+    color: #4e0070;
+}
+
+.color-secundary {
+    color: #385898;
+}
+
 .text-login {
     color: white;
     font-size: 19px;
