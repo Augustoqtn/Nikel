@@ -12,7 +12,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
     const password = document.getElementById("password-input").value;
     const checkSession = document.getElementById("session-input").checked;
 
-    const account = getAccont(email);
+    const account = getAccount(email);
 
     if (!account) {
         alert("Opps! verifique o usuário ou a senha!");
@@ -43,7 +43,7 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
         alert("Verifique seu E-mail, ele deve ter no minimo cinco carácters");
         return;
     }
-    if (password.length < 5) {
+    if (password.length < 4) {
         alert("Verifique sua senha, ela deve ter no minimo 4 digitos");
         return;
     }
@@ -80,14 +80,14 @@ function saveSession(data, saveSession) {
     if (saveSession) {
         localStorage.setItem("session", data);
     }
-    sessionStorage.setItem("logget", data);
+    sessionStorage.setItem("logged", data);
 }
 
 
-function getAccont(key) {
-    const accont = localStorage.getItem(key);
-    if (accont) {
-        return JSON.parse(accont);
+function getAccount(key) {
+    const account = localStorage.getItem(key);
+    if (account) {
+        return JSON.parse(account);
     }
     return "";
 }
